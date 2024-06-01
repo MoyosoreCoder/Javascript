@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Object Constructor</h1>
+        <h2>Adding a property to a Constructor</h2>
+
+        <!--Javascript demo id-->
+        <p id="demo"></p>
+
+        <script>
+            function Person(first, last, age, height) {
+                this.firstname = first;
+                this.lastname = last;
+                this.age = age;
+                this.height = height;
+            }
+
+             // create the object
+             const identity = new Person("Zahra", "Oladeji", 10, "2.5m");
+            
+            
+             identity.color = "fair";
+
+           
+            document.getElementById("demo").innerHTML = 
+            "My cutie is " + identity.color;
+        </script>
+    </body>
+</html>
