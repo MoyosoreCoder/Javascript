@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Javascript Template strings pactice</h1>
+<p>Template string allows variables in string</p>
+
+<p id="demo"></p>
+
+<p>Templates are not supported in Internet explorer</p>
+
+<script>
+let header = "This is the header tag";
+tags = ["python", "javascript", "c++"];
+
+let html = `<h2>${header}</h2><ul>`;
+
+for (const x of tags){
+html += `<li>${x}</li>`;
+}
+html += `</ul>`;
+document.getElemenetById("demo").innerHTML = html;
+
+</script>
+</body>
+</html>
