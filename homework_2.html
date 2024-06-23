@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SheCodes homework1</title>
+</head>
+<style>
+    .demo {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .demo h1 {
+        color: #1a64db;
+        text-align: center;
+        font-size: 34px;
+        line-height: 48px;
+        margin: 0;
+    }
+    .demo h2{
+        text-align: center;
+        font-size: 34px;
+        line-height: 48px;
+        margin: 0;
+        font-weight: 400;
+    }
+    .demo li{
+        list-style: none;
+        text-align: center;
+        padding: 10px 0;
+        max-width: 400px;
+        margin: 0 auto;
+
+    }
+    .demo li:hover {
+        border-radius: 10px;
+        border: 1px solid rgb(164, 158, 127);
+        background-color: rgb(164, 158, 127);
+        max-width: 400px;
+    }
+    .button {
+        display: block;
+        margin: 20px auto;
+        border: 1px solid #1a64d6;
+        background: #1a64d6;
+        color: #fff;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 16px 24px;
+        border-radius: 30px;
+
+    }
+    .button:hover {
+        background-color: #fff;
+        color: #1a64d6;
+    }
+    
+</style>
+<body>
+    <!--div class-->
+    <div class="demo">
+        <!--first div h1-->
+        <h1>
+            🌤
+            <br>
+            Currently 21° in Tokyo
+        </h1>
+        <!--first div h2 for degrees-->
+        <h2>13° / 
+            <strong>23°</strong>
+        </h2>
+
+        <!--ul space for list items, h3, li, p, strong tags-->
+        <ul>
+            <li>
+                <h3>🌧Tomorrow</h3>
+                <p>10°/ <strong>22°</strong>
+                </p>
+            </li>
+
+            <li>
+                <h3>🌥 Saturday</h3>
+                <p>15°/ <strong>17°</strong>
+                </p>
+            </li>
+
+            <li>
+                <h3>☀️ Sunday</h3>
+                <p>25°/ <strong>28°</strong>
+                </p>
+            </li>
+
+            
+        </ul>
+        <!--button tag and p space-->
+        <button class="button">Change city</button>
+        <p>Coded by Mariam Kelani</p>
+    </div>
+
+    <script>
+        function updateInfo() {
+            let city = prompt("What city do you live?");
+            let temp = prompt("What temperature is it?");
+
+            let h1 = document.querySelector(".demo h1");
+            h1.innerHTML = "😄 <br> Currently " + temp + "°C" +" " + "in" + " " + city;
+        }
+
+        let contactButton = document.querySelector("button"); 
+        
+
+        contactButton.addEventListener("click", updateInfo);
+
+        
+    </script>
+</body>
+</html>
