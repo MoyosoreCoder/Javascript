@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fashion</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: black;
+        }
+        h2 {
+            text-align: center;
+            color: black;
+        }
+        img {
+            max-width: 100%;
+        }
+        button {
+            display: block;
+            margin: 0 auto;
+            border: 1px solid plum;
+            background: white;
+            font-size: 20px;
+            border-radius: 6px;
+            padding: 10px 15px;
+            transition: all 150ms ease-in-out;
+
+        }
+        button:hover {
+            background: plum;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            margin: 10px 0;
+            color: white;
+            font-size: 18px;
+        }
+        .dark .container {
+            background: rgba(255, 255, 255. 0.1);
+        }
+        .dark {
+            background: black;
+            color:white;
+        }
+        .dark a {
+            color: plum;
+        }
+        .container {
+            max-width: 600px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px auto;
+        }
+        .theme-class {
+            font-size: 12px;
+            background: black;
+            color: white;
+            padding: 5 8px;
+        }
+
+        .first-cloth-img{
+            color: black;
+            background: white;
+        }
+        .first-cloth-img:hover {
+            border-radius: 10px;
+            transform: scale(1.1);
+            filter: contrast(80%);
+        }
+        .grid {
+            margin: 15px 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 20px;
+            
+        }
+        .grid img {
+            width: 100%;
+            border-radius: 8px;
+            transition: all 150ms ease-in-out;
+        }
+        .grid img:hover {
+            transform: scale(2);
+        }
+    </style>
+</head>
+<body class="dark">
+    <button class="theme-class">Dark theme</button>
+    <div class="container">
+    <h1>Welcome to MAYKAY DESIGNS 👗</h1>
+    <h2>Friday casual wears</h2>
+    <a href="https://en.wikipedia.org/wiki/African_wax_prints" target="_blank">
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/133/382/original/il_600x600.5705778390_6tnl_1_.jpg?1720968510" alt="" class="first-cloth-img">
+    </a>
+    <div class="grid">    
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/133/377/original/il_600x600.3925542822_8swc_1_.jpg?1720968433" alt="">
+
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/133/385/original/il_600x600.5754113127_9a20_1_.jpg?1720968606" alt="">
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/133/386/original/il_600x600.4051651440_g7m9_1_.jpg?1720968667" alt="">
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/133/459/original/images_1_.jpg?1720994088" alt="">
+    <img src="">
+    </div>
+    <p>
+        Ankara jacket designs are considered informal or casual clothing, yet they can be worn to corporate occasions depending on the design and how you style them. These outfits flatter everyone, regardless of body type, height, or skin tone, because they give your body more contour and structure and make you look dapper. An Ankara jacket suits anything from pants, skirts, shorts to dresses. Also, they save money because you can style them to suit different occasions. For instance, you can wear your Ankara jacket as casual attire for a date with friends or your partner. Also, you can turn the same clothing into an official jacket for weekend corporate meetings. Read more: https://www.legit.ng/1190773-top-female-ankara-jacket-designs.html 
+    </p>
+    <a href="https://en.wikipedia.org/wiki/African_wax_prints" target="_blank">🕮Read on Wikipedia</a>
+    <button>Learn more </button>
+    </div>
+    <footer>Coded by Mariam Kelani ❤</footer>
+    <script>
+        function changeTheme() {
+
+            let body = document.querySelector("body");
+            // body.classList.toggle("dark");
+            if (body.classList.contains("dark")) {
+                body.classList.remove("dark");
+            } else {
+                body.classList.add("dark");
+            }
+        }
+        let themeButton = document.querySelector(".theme-class");
+        themeButton.addEventListener('click', changeTheme)
+    </script>
+    </body>
+    </html>
